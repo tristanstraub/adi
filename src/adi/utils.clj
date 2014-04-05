@@ -3,6 +3,10 @@
         [hara.hash-map :only [keyword-contains? keyword-ns]]
         [datomic.api :only [tempid]]))
 
+(defn double?
+  "Returns `true` if `x` is a double"
+  [x] (instance? java.lang.Double x))
+
 (defn enum?
   "Returns `true` if `x` is an enum keyword"
   [x] (or (keyword? x) (long? x)))
